@@ -1,0 +1,110 @@
+
+### get trips
+GET http://127.0.0.1:3000/api/getAll
+content-type: application/json
+
+
+### get res
+GET http://127.0.0.1:3000/api/getAllReservations
+content-type: application/json
+
+### get res
+GET http://127.0.0.1:3000/api/getAllReviews/65b44d3021464162c6893f44
+content-type: application/json
+
+### get reservations by date
+GET http://127.0.0.1:3000/api/getreservationsByDate/01-02-2024
+
+
+### post trip
+POST http://127.0.0.1:3000/api/postTrip
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA1MzE5MTQsImV4cCI6MTcwMTEzNjcxNCwidXNlcm5hbWUiOiJhbGVqYW5kcm9BZG1pbiIsImZ1bGxuYW1lIjoiSmF2aWVyIEFsZWphbmRybyBMb3BleiBSYW1pcmV6Iiwicm9sZXMiOlsiQWRtaW5pc3RyYXRvciIsIkVkaXRvciJdfQ.qQ036SH8-73JFNcTJRf953b3y_xYX9wUMxNk1PxPVSE
+
+{
+    "images": [
+        "https://elsalvador.travel/system/wp-content/uploads/2020/01/Mural-de-Ataco2.jpg",
+        "https://elsalvador.travel/system/wp-content/uploads/2020/01/Mural-de-Ataco2.jpg"
+        ],
+    "destTitle":"Ataco",
+    "location":"Sonsonate, El Salvador",
+    "category":"Colonial Town",
+    "price": 70,
+    "description":"One of the colonial town in Ruta de las flores, this is an important town for tourism.",
+    "include": [
+        "Transportation",
+        "Hostel",
+        "Guide",
+        "Walk around the town"
+        ]
+}
+
+### post reservation
+POST http://127.0.0.1:3000/api/postReservation
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA1MzE5MTQsImV4cCI6MTcwMTEzNjcxNCwidXNlcm5hbWUiOiJhbGVqYW5kcm9BZG1pbiIsImZ1bGxuYW1lIjoiSmF2aWVyIEFsZWphbmRybyBMb3BleiBSYW1pcmV6Iiwicm9sZXMiOlsiQWRtaW5pc3RyYXRvciIsIkVkaXRvciJdfQ.qQ036SH8-73JFNcTJRf953b3y_xYX9wUMxNk1PxPVSE
+
+{
+    "tripId": "65b44d3021464162c6893f44",
+    "fullName":"Javier Alejandro Lopez",
+    "customersQty":1,
+    "authorizationNmb": "ADCE190293D",
+    "total":110,
+    "phoneNumber": "+50375682298",
+    "idNumber":"04731187-4",
+    "pickupAddress": "Calle Gerardo Barrios, Av. Bolivar, La Libertad",
+    "reservationDate": "01-02-2024",
+    "preferedLanguage": "Spanish",
+    "originNation": "El Salvador",
+    "deseaseOrmedicine": "No"
+}
+
+### post reservation
+POST http://127.0.0.1:3000/api/postReview
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA1MzE5MTQsImV4cCI6MTcwMTEzNjcxNCwidXNlcm5hbWUiOiJhbGVqYW5kcm9BZG1pbiIsImZ1bGxuYW1lIjoiSmF2aWVyIEFsZWphbmRybyBMb3BleiBSYW1pcmV6Iiwicm9sZXMiOlsiQWRtaW5pc3RyYXRvciIsIkVkaXRvciJdfQ.qQ036SH8-73JFNcTJRf953b3y_xYX9wUMxNk1PxPVSE
+
+{
+    "tripId": "65b44d3021464162c6893f44",
+    "commentary": "Una de las mejores experiencias en la vida",
+    "stars": 4,
+    "name": "Javier Lopez"
+}
+### editar
+PUT http://127.0.0.1:5000/pacientes/editar
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDAxMDMyNTQsImV4cCI6MTcwMDEwNjg1NCwidXNlcm5hbWUiOiJhbGVqYW5kcm9BZG1pbiIsImZ1bGxuYW1lIjoiSmF2aWVyIEFsZWphbmRybyBMb3BleiBSYW1pcmV6Iiwicm9sZXMiOlsiQWRtaW5pc3RyYXRvciIsIkVkaXRvciJdfQ.NBT7oataCzaN-Ye_VzpzCWpuGCRcguJCO3qHW81__1E
+
+{
+    "images": [
+        "https://elsalvador.travel/system/wp-content/uploads/2020/01/Mural-de-Ataco2.jpg",
+        "https://elsalvador.travel/system/wp-content/uploads/2020/01/Mural-de-Ataco2.jpg"
+        ],
+    "destTitle":"Ataco",
+    "location":"Sonsonate, El Salvador",
+    "category":"Colonial Town",
+    "price": 70,
+    "description":"One of the colonial town in Ruta de las flores, this is an important town for tourism.",
+    "include": [
+        "Transportation",
+        "Hostel",
+        "Guide",
+        "Walk around the town"
+        ]
+}
+
+### editar
+PUT http://127.0.0.1:3000/api/updateCommentary/65b44d3021464162c6893f44
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDAxMDMyNTQsImV4cCI6MTcwMDEwNjg1NCwidXNlcm5hbWUiOiJhbGVqYW5kcm9BZG1pbiIsImZ1bGxuYW1lIjoiSmF2aWVyIEFsZWphbmRybyBMb3BleiBSYW1pcmV6Iiwicm9sZXMiOlsiQWRtaW5pc3RyYXRvciIsIkVkaXRvciJdfQ.NBT7oataCzaN-Ye_VzpzCWpuGCRcguJCO3qHW81__1E
+
+{
+    "commentary" : "Uno de los mejores trips, te pone a prueba la subida pero la pasas genial y la vista es increible",
+    "stars" : 4,
+    "name" : "Cristian Martinez"
+}
+
+### borrar pacientes
+DELETE  http://127.0.0.1:5000/pacientes/borrar/16781
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA1MzE5MTQsImV4cCI6MTcwMTEzNjcxNCwidXNlcm5hbWUiOiJhbGVqYW5kcm9BZG1pbiIsImZ1bGxuYW1lIjoiSmF2aWVyIEFsZWphbmRybyBMb3BleiBSYW1pcmV6Iiwicm9sZXMiOlsiQWRtaW5pc3RyYXRvciIsIkVkaXRvciJdfQ.qQ036SH8-73JFNcTJRf953b3y_xYX9wUMxNk1PxPVSE
